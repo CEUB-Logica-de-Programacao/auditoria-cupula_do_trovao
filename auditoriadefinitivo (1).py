@@ -1,16 +1,17 @@
 def verificaID():
-    ID=[]
-    x=str(input("ID \n"))
+    ID=[]#cria uma lista vazia que armazenará os caracteres do ID
+    x=str(input("ID \n")) #A variavel x guarda o ID digitado pelo usuario
 
-    for i in range(len(x)):
-        ID.append(x[i])
-    ID.sort()
-    new1=int(ID[0] + ID[3])
-    new2=int(ID[1] + ID[2])
-
-    if new1+new2<=100:
+    for i in range(len(x)): #O laço é executado len(x) vezes
+        ID.append(x[i]) #Cada caractere na variável x é adicionado à lista ID, um por vez
+    ID.sort() #Organiza a lista ID em ordem crescente
+    new1=int(ID[0] + ID[3]) #Junta em uma unica string o menor número com o maior e o número resultante é convertido para inteiro
+    new2=int(ID[1] + ID[2]) #Cria uma string com o 2 menor número e o 2 maior número
+    #Os números new1 e new2 são os que resultam na menor soma pois as menores dezenas são somadas
+    
+    if new1+new2<=100: #Se new1 + new2 for menor ou igual a 100, é um ID válido
         print("valido")
-    else:
+    else:              #Senão, o ID é inválido
         print("inválido")
 
 
@@ -52,6 +53,12 @@ def cadastrarSenha():
         print("Senha inválida")
 
 def Auditoria():
+    y = 0
+    votos = []
+    resp = ''
+    while resp =='s':
+        y = int(input("Digite o voto a ser adicionado à lista de votos: "))
+        votos.append(y)
     verificaID()
     ContaVotos()
     cadastrarSenha()
