@@ -15,7 +15,7 @@ def verificaID():
         print("inválido")
 
 
-def ContaVotos(votos:list): #uma função que recebe como parâmetro uma lista com votos
+def ContaVotos(votos): #uma função que recebe como parâmetro uma lista com votos
     
     votosOrganizados = [] #não consegui pensar em um nome bom para a lista, no decorrer do code vcs vão ver para o q ela serve
     votosFaltando = [] #a mesma coisa da de cima
